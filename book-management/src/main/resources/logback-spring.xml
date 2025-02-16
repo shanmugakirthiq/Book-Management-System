@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ADMINLOGIN_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>logs/adminlogin.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ADMINDASHBOARD_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>logs/admindashboard.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="BOOKS_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>logs/books.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="MEMBER_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>logs/member.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="MEMBERLOGIN_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>logs/memberlogin.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="RENTAL_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>logs/rental.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SUBSCRIPTION_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>logs/subscription.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.stradegi.book_management.controller.AdminLoginController" level="INFO" additivity="false">
+        <appender-ref ref="ADMINLOGIN_LOG"/>
+    </logger>
+
+    <logger name="com.stradegi.book_management.controller.AdminDashboardController" level="INFO" additivity="false">
+        <appender-ref ref="ADMINDASHBOARD_LOG"/>
+    </logger>
+
+    <logger name="com.stradegi.book_management.controller.BooksController" level="INFO" additivity="false">
+        <appender-ref ref="BOOKS_LOG"/>
+    </logger>
+
+    <logger name="com.stradegi.book_management.controller.MemberController" level="INFO" additivity="false">
+        <appender-ref ref="MEMBER_LOG"/>
+    </logger>
+
+    <logger name="com.stradegi.book_management.controller.MemberLoginController" level="INFO" additivity="false">
+        <appender-ref ref="MEMBERLOGIN_LOG"/>
+    </logger>
+
+    <logger name="com.stradegi.book_management.controller.RentalController" level="INFO" additivity="false">
+        <appender-ref ref="RENTAL_LOG"/>
+    </logger>
+
+    <logger name="com.stradegi.book_management.controller.SubscriptionPlanController" level="INFO" additivity="false">
+        <appender-ref ref="SUBSCRIPTION_LOG"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

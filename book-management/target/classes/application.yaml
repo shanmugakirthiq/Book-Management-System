@@ -1,0 +1,39 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
+server:
+  port: 8080
+
+
+logging:
+
+  level:
+    root: INFO
+    com.example.weather_application: DEBUG
+    org.springframework.security: DEBUG
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs  # Default path for OpenAPI JSON
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    operationsSorter: method  # Sort endpoints by HTTP method
+    tagsSorter: alpha  # Sort tags alphabetically
+  paths-to-match: /**  # Expose only API endpoints
+
